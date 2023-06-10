@@ -1,21 +1,17 @@
 import fs from "fs";
 
-type PostProps = {
-  params: {
-    id: string;
-  };
+type PostParams = {
+  id: string;
 };
 
-export default ({ params }: PostProps) => <div>{params.id}</div>;
+export default ({ params }: { params: PostParams }) => <div>{params.id}</div>;
 
 const postsDirectory = "posts";
 
-export const generateStaticParams = (): PostProps[] => {
+export const generateStaticParams = (): PostParams[] => {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => ({
-    params: {
-      id: fileName,
-    },
+    id: fileName,
   }));
 };
 
