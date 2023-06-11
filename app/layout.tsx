@@ -31,10 +31,10 @@ const Hero = () => (
         src="/bridge.jpg"
         fill
         alt="Photo of the Clifton Suspension Bridge"
-        className="object-cover object-center-[25%]"
+        className="object-cover object-[center_25%]"
       />
     </div>
-    <div className="relative flex flex-row justify-between h-full items-center p-24 text-3xl font-bold">
+    <div className="relative flex flex-row justify-between h-full items-center p-24 text-3xl font-bold bg-gradient-to-tr from-[#02061788]">
       <a href="/" className="text-white">
         Matt&apos;s Website
       </a>
