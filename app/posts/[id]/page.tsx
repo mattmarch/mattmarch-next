@@ -1,41 +1,25 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import { getAllPageIds, getPageData } from "@/lib/posts";
 
 type PostParams = {
   id: string;
 };
 
 export default async ({ params }: { params: PostParams }) => {
-  const fullPath = path.join(postsDirectory, `${params.id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  const { data, content } = matter(fileContents);
-
-  const htmlContent = await remark().use(html).process(content);
-  const formattedDate = new Date(data.date).toLocaleDateString("en-GB");
+  const { title, date, contentHtml } = await getPageData(params.id);
+  const formattedDate = date.toLocaleDateString();
 
   return (
-    <div>
-      <h1 className="text-2xl">{data.title}</h1>
+    <article className="prose lg:prose-xl dark:prose-invert p-24">
+      <h1>{title}</h1>
       <div>Published {formattedDate}</div>
-      <article
-        className="prose lg:prose-xl dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: htmlContent.toString() }}
-      />
-    </div>
+      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+    </article>
   );
 };
 
-const postsDirectory = "posts";
-
-export const generateStaticParams = (): PostParams[] => {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => ({
-    id: fileName.replace(/\.md$/, ""),
-  }));
+export const generateStaticParams = async (): Promise<PostParams[]> => {
+  const ids = await getAllPageIds();
+  return ids.map((id) => ({ id }));
 };
 
 export const dynamicParams = false;
