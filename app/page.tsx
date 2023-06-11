@@ -9,12 +9,12 @@ export default async () => {
 
   return (
     <main className="min-h-screen p-24 prose lg:prose-xl dark:prose-invert ">
-      <h1>Hi, I'm Matt March, welcome to my website</h1>
+      <h1>Hi, I&apos;m Matt March, welcome to my website</h1>
 
       <h2>Recent posts</h2>
       <ul>
         {sortedPosts.map((post) => (
-          <PostListItem post={post} />
+          <PostListItem key={post.id} post={post} />
         ))}
       </ul>
     </main>
