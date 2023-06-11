@@ -8,7 +8,7 @@ export default async () => {
   );
 
   return (
-    <main className="min-h-screen p-24 prose lg:prose-xl dark:prose-invert ">
+    <main className="min-h-screen md:p-24 p-8 prose lg:prose-xl dark:prose-invert ">
       <h1>Hi, I&apos;m Matt March, welcome to my website</h1>
 
       <h2>Recent posts</h2>
