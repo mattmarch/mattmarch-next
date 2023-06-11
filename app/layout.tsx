@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default ({ children }: { children: React.ReactNode }) => {
         <footer className="flex flex-col m-4 h-9 justify-between items-stretch text-center dark:text-slate-400 text-slate-800">
           <hr className="border-slate-600" />© 2020 Matt March
         </footer>
+        <Analytics />
       </body>
     </html>
   );
