@@ -14,7 +14,10 @@ export default ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <body className={inter.className}>
         <Hero />
-        <div>{children}</div>
+        <main>{children}</main>
+        <footer className="flex flex-col m-4 h-9 justify-between items-stretch text-center dark:text-slate-400 text-slate-800">
+          <hr className="border-slate-600" />© 2020 Matt March
+        </footer>
       </body>
     </html>
   );
