@@ -4,7 +4,9 @@ type PostParams = {
   id: string;
 };
 
-export default async ({ params }: { params: PostParams }) => {
+type Props = { params: PostParams };
+
+export default async ({ params }: Props) => {
   const { title, date, contentHtml } = await getPageData(params.id);
   const formattedDate = date.toLocaleDateString();
 
@@ -15,6 +17,11 @@ export default async ({ params }: { params: PostParams }) => {
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </article>
   );
+};
+
+export const generateMetadata = async ({ params }: Props) => {
+  const { title } = await getPageData(params.id);
+  return { title };
 };
 
 export const generateStaticParams = async (): Promise<PostParams[]> => {
