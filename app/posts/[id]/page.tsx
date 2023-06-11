@@ -11,7 +11,7 @@ export default async ({ params }: Props) => {
   const formattedDate = date.toLocaleDateString();
 
   return (
-    <article className="prose lg:prose-xl dark:prose-invert md:p-24 p-8">
+    <article className="prose lg:prose-xl dark:prose-invert md:p-24 p-8 m-auto">
       <h1>{title}</h1>
       <div>Published {formattedDate}</div>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />

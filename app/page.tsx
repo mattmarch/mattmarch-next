@@ -8,7 +8,7 @@ export default async () => {
   );
 
   return (
-    <main className="min-h-screen md:p-24 p-8 prose lg:prose-xl dark:prose-invert ">
+    <article className="min-h-screen md:p-24 p-8 prose lg:prose-xl dark:prose-invert m-auto">
       <h1>Hi, I&apos;m Matt March, welcome to my website.</h1>
       <p>
         I&apos;m a Bristol based software engineer currently working at{" "}
@@ -54,7 +54,7 @@ export default async () => {
           <PostListItem key={post.id} post={post} />
         ))}
       </ul>
-    </main>
+    </article>
   );
 };
 
