@@ -5,7 +5,7 @@ date: "2023-06-25"
 
 Back in 2020, global pandemic in full swing and nationwide lockdowns calling off all other commitments, I started a blog. With all my newfound free time I could work on a myriad of interesting projects, follow them up with insightful blog posts, and rise to the acclaimed heights of getting to the front page of Hacker News.
 
-So I got to work. I threw away my previous abandoned attempt of a Github Pages Jekyll blog, picked the cool Javascript framework of the day: Gatsby, and created a simple bespoke blog. I wrote my [first post](/posts/gatsby-website.md) detailing writing the site, and shortly after published a [second post](/posts/birthday-playlist.md). This was surely going to be the start of something great.
+So I got to work. I threw away my previous abandoned attempt of a Github Pages Jekyll blog, picked the cool Javascript framework of the day: Gatsby, and created a simple bespoke blog. I wrote my [first post](/posts/gatsby-website) detailing writing the site, and shortly after published a [second post](/posts/birthday-playlist). This was surely going to be the start of something great.
 
 ## 3 years later...
 
@@ -36,7 +36,7 @@ In other words, _dependency rot_ had set in. Normally this is something you thin
 
 I'd also not touched (or heard all that much about) Gatsby since first writing the blog. But I had been playing around recently with a little thing which has been getting some industry buzz lately called Next.js. It's even the top suggestion in the ["Start a New React Project" guide](https://react.dev/learn/start-a-new-react-project) in the official React docs.
 
-So I recreated my Gatsby blog by loosely following the Next.js tutorial (but using Tailwind CSS and the new app router). This was a much more enjoyable experience than painfully updating all the dependencies on my old site. And here we are now!
+So I recreated my Gatsby blog by loosely following the Next.js tutorial (but using Tailwind CSS and the new app router). This was a much more enjoyable experience than painfully updating all the dependencies on my old site. As Next.js is a little more _batteries included_ than Gatsby, the new site tallies up to a slightly more manageable 19 direct dependencies. And here we are now!
 
 ## Plans for the future
 

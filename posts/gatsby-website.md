@@ -3,6 +3,8 @@ title: "Creating a website with Gatsby"
 date: "2020-05-15"
 ---
 
+_Update 25/06/2023: This site has since been rewritten in Next.js, see [this blog post](/posts/dependency-rot) for details._
+
 You're reading this on the new and updated version of my website. I'm using [Gatsby](https://www.gatsbyjs.org/) built and hosted for free by [Netlify](https://www.netlify.com/).
 
 I love starting personal projects. Unfortunately much more than finishing them. The motivation behind this website is to have somewhere to build a portfolio and force myself to put the final polish on projects to get them into a state to show off.
