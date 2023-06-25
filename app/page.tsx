@@ -43,7 +43,7 @@ export default async () => {
           <a href="https://mattmarch.itch.io/rgb-pigs">RGB Pigs</a>, a topdown
           survival game where you must toggle your flashlight&apos;s colour to
           tell friend from foe. Playable in browser and built with{" "}
-          <a href="https://godotengine.org/">Godot Engine.</a>
+          <a href="https://godotengine.org/">Godot Engine</a>.
         </li>
       </ul>
 
