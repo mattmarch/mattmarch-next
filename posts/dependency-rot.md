@@ -3,7 +3,7 @@ title: "Dependency rot: why I rewrote this site (again) in Next.js"
 date: "2023-06-25"
 ---
 
-Back in 2020, global pandemic in full swing and nationwide lockdowns calling off all other commitments, I started a blog. With all my newfound free time I could work on a myriad of interesting projects, follow them up with insightful blog posts, and rise to the acclaimed heights of getting to the front page of Hacker News.
+Back in 2020, global pandemic in full swing and nationwide lockdowns calling off all other commitments, I started a blog. With all my newfound free time I could work on a myriad of interesting projects, follow them up with insightful blog posts, and occassionally maybe even rise to the acclaimed heights of the front page of Hacker News.
 
 So I got to work. I threw away my previous abandoned attempt of a Github Pages Jekyll blog, picked the cool Javascript framework of the day: Gatsby, and created a simple bespoke blog. I wrote my [first post](/posts/gatsby-website) detailing writing the site, and shortly after published a [second post](/posts/birthday-playlist). This was surely going to be the start of something great.
 
