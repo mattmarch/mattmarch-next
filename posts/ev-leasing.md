@@ -1,6 +1,6 @@
 ---
 title: "Lease or no lease: a spreadsheet turned mini web app"
-date: "2023-07-06"
+date: "2023-07-07"
 ---
 
 ## Checking out work's electric car scheme
