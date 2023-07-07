@@ -8,7 +8,7 @@ type Props = { params: PostParams };
 
 export default async ({ params }: Props) => {
   const { title, date, contentHtml } = await getPageData(params.id);
-  const formattedDate = date.toLocaleDateString();
+  const formattedDate = date.toLocaleDateString("en-GB");
 
   return (
     <article className="prose lg:prose-xl dark:prose-invert md:p-24 p-8 m-auto">

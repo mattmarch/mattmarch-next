@@ -68,6 +68,6 @@ const PostListItem = ({ post: { id, title, date } }: PostListItemProps) => (
       {title}
     </Link>
     <br />
-    {date.toLocaleDateString()}
+    {date.toLocaleDateString("en-GB")}
   </li>
 );
