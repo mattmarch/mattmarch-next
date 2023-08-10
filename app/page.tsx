@@ -19,6 +19,11 @@ export default async () => {
           <a href="https://github.com/mattmarch">Github</a>
         </li>
         <li>
+          <a rel="me" href="https://mastodon.social/@mattmarch">
+            Mastodon
+          </a>
+        </li>
+        <li>
           <a href="https://www.linkedin.com/in/matthew-march-a75b21121/">
             LinkedIn
           </a>
