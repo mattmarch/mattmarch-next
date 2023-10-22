@@ -5,7 +5,7 @@ date: "2023-10-22"
 
 I'm building my own wedding website. Yes, I should have known better. As it's been my full time job for a fair few years I should have remembered that software development is a frustrating and easy to underestimate activity. But that's not the point of this post!
 
-Being the current _cool_ thing, and [already having some experience](/posts/dependency-rot) in it, I picked Next.js. Since most of the content would be static and the guest list isn't expected to change very often I could generate personalised pages for each guest at build time so, among other reasons, it seemed like a good idea.
+Being the current _cool_ thing, and [already having some experience](/posts/dependency-rot) in it, I picked [Next.js](https://nextjs.org/). Since most of the content would be static and the guest list isn't expected to change very often I could generate personalised pages for each guest at build time so, among other reasons, it seemed like a good idea.
 
 The next question was data. All of our wedding planning has been happening in a big Google Sheets spreadsheet. We needed something where it's easy to import the guest information into the wedding site, and easy to export/view the RSVPs.
 
