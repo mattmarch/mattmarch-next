@@ -68,7 +68,7 @@ type PostListItemProps = {
 };
 
 const PostListItem = ({ post: { id, title, date } }: PostListItemProps) => (
-  <li>
+  <li className="leading-3">
     <Link href={`posts/${id}`} className="text-xl">
       {title}
     </Link>
