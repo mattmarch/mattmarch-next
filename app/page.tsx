@@ -11,8 +11,8 @@ export default async () => {
     <article className="min-h-screen md:p-24 p-8 prose lg:prose-xl dark:prose-invert m-auto">
       <h1>Hi, I&apos;m Matt March, welcome to my website.</h1>
       <p>
-        I&apos;m a Bristol based software engineer currently working at{" "}
-        <a href="https://www.ghyston.com/">Ghyston</a>. You can find me on:
+        I&apos;m a Bristol based senior software engineer currently working at{" "}
+        <a href="https://devyce.com/">Devyce</a>. You can find me on:
       </p>
       <ul>
         <li>
