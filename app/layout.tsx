@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,9 +38,9 @@ const Hero = () => (
       />
     </div>
     <div className="relative flex flex-row justify-between h-full items-center p-24 text-3xl font-bold bg-gradient-to-tr from-[#02061788]">
-      <a href="/" className="text-white">
+      <Link href="/" className="text-white">
         Matt&apos;s Website
-      </a>
+      </Link>
     </div>
   </header>
 );
