@@ -6,8 +6,9 @@ type PostParams = {
 
 type Props = { params: PostParams };
 
-export default async ({ params }: Props) => {
-  const { title, date, contentHtml } = await getPageData(params.id);
+export default async (props: Props) => {
+  const { id } = await props.params;
+  const { title, date, contentHtml } = await getPageData(id);
   const formattedDate = date.toLocaleDateString("en-GB");
 
   return (
@@ -19,8 +20,9 @@ export default async ({ params }: Props) => {
   );
 };
 
-export const generateMetadata = async ({ params }: Props) => {
-  const { title } = await getPageData(params.id);
+export const generateMetadata = async (props: Props) => {
+  const { id } = await props.params;
+  const { title } = await getPageData(id);
   return { title };
 };
 
