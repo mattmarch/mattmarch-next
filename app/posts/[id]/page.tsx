@@ -1,10 +1,8 @@
 import { getAllPageIds, getPageData } from "@/lib/posts";
 
-type PostParams = {
-  id: string;
-};
+type PostParams = { id: string };
 
-type Props = { params: PostParams };
+type Props = { params: Promise<PostParams> };
 
 export default async (props: Props) => {
   const { id } = await props.params;
