@@ -19,6 +19,9 @@ export default async () => {
           <a href="https://github.com/mattmarch">Github</a>
         </li>
         <li>
+          <a href="https://bsky.app/profile/mattmarch.com">Bluesky</a>
+        </li>
+        <li>
           <a rel="me" href="https://mastodon.social/@mattmarch">
             Mastodon
           </a>
@@ -54,7 +57,7 @@ export default async () => {
 
       <h2>Blog posts</h2>
       <p>And here are some blog posts I&apos;ve put together:</p>
-      <ul className="space-y-10">
+      <ul>
         {sortedPosts.map((post) => (
           <PostListItem key={post.id} post={post} />
         ))}
@@ -68,11 +71,10 @@ type PostListItemProps = {
 };
 
 const PostListItem = ({ post: { id, title, date } }: PostListItemProps) => (
-  <li className="leading-3">
+  <li>
     <Link href={`posts/${id}`} className="text-xl">
       {title}
     </Link>
-    <br />
-    {date.toLocaleDateString("en-GB")}
+    <p className="mt-0.5 mb-1 not-prose">{date.toLocaleDateString("en-GB")}</p>
   </li>
 );
