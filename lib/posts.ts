@@ -11,10 +11,13 @@ export const getAllPageIds = async (): Promise<string[]> => {
   return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
 };
 
-export type PostData = {
+export type PostMeta = {
   id: string;
   title: string;
   date: Date;
+};
+
+export type PostData = PostMeta & {
   contentHtml: string;
 };
 
@@ -33,9 +36,16 @@ export const getPageData = async (id: string): Promise<PostData> => {
   };
 };
 
-export const getAllPageData = async (): Promise<PostData[]> => {
+export const getPostMeta = async (id: string): Promise<PostMeta> => {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = await fs.readFile(fullPath, "utf8");
+  const { data } = matter(fileContents);
+  return { id, ...parseMatterData(id, data) };
+};
+
+export const getAllPostMeta = async (): Promise<PostMeta[]> => {
   const allIds = await getAllPageIds();
-  return Promise.all(allIds.map(getPageData));
+  return Promise.all(allIds.map(getPostMeta));
 };
 
 type MatterData = { [key: string]: unknown };

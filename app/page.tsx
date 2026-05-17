@@ -1,8 +1,8 @@
-import { PostData, getAllPageData } from "@/lib/posts";
+import { PostMeta, getAllPostMeta } from "@/lib/posts";
 import Link from "next/link";
 
 export default async function Home() {
-  const allPosts = await getAllPageData();
+  const allPosts = await getAllPostMeta();
   const sortedPosts = allPosts.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf()
   );
@@ -67,7 +67,7 @@ export default async function Home() {
 }
 
 type PostListItemProps = {
-  post: PostData;
+  post: PostMeta;
 };
 
 const PostListItem = ({ post: { id, title, date } }: PostListItemProps) => (
