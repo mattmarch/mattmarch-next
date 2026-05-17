@@ -11,7 +11,7 @@ export const metadata = {
   description: "Matt March's personal website/blog.",
 };
 
-export default ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -24,7 +24,7 @@ export default ({ children }: { children: React.ReactNode }) => {
       </body>
     </html>
   );
-};
+}
 
 const Hero = () => (
   <header className="h-80 relative">

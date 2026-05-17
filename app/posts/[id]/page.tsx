@@ -4,7 +4,7 @@ type PostParams = { id: string };
 
 type Props = { params: Promise<PostParams> };
 
-export default async (props: Props) => {
+export default async function PostPage(props: Props) {
   const { id } = await props.params;
   const { title, date, contentHtml } = await getPageData(id);
   const formattedDate = date.toLocaleDateString("en-GB");
@@ -16,7 +16,7 @@ export default async (props: Props) => {
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </article>
   );
-};
+}
 
 export const generateMetadata = async (props: Props) => {
   const { id } = await props.params;

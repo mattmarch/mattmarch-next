@@ -1,7 +1,7 @@
 import { PostData, getAllPageData } from "@/lib/posts";
 import Link from "next/link";
 
-export default async () => {
+export default async function Home() {
   const allPosts = await getAllPageData();
   const sortedPosts = allPosts.sort(
     (a, b) => b.date.valueOf() - a.date.valueOf()
@@ -64,7 +64,7 @@ export default async () => {
       </ul>
     </article>
   );
-};
+}
 
 type PostListItemProps = {
   post: PostData;
